@@ -1,0 +1,62 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia alunoNome = "", excNecessario = ""
+		cadeia nomeMusculacao = "Musculação ", nomeCorrida = "\nCorrida ", nomeBicicleta = "\nBicicleta ergonômica ", nomeCorda = "\nPular corda "
+		
+		real alunoPeso = 0.0, alunoAltura = 0.0, imc
+		real perdaCalorica = 0.0, valorPagar = 0.0, valorDesconto = 0.0
+
+		escreva("Informe o nome do aluno: ")
+		leia(alunoNome)
+
+		escreva("Informe o peso do aluno: ")
+		leia(alunoPeso)
+
+		escreva("Informe a altura do aluno: ")
+		leia(alunoAltura)
+
+		escreva("Informe calorias a serem gasta: ")
+		leia(perdaCalorica)
+
+		imc = alunoPeso / (alunoAltura * alunoAltura) 
+
+		se(perdaCalorica <= 150){
+			excNecessario = nomeMusculacao
+			valorPagar = 80
+			
+		}
+		
+		senao se (perdaCalorica <= 850){
+			excNecessario = nomeMusculacao + nomeCorrida
+			valorPagar = 100
+			
+		}
+		
+		senao se (perdaCalorica <= 1400){
+			excNecessario = nomeMusculacao + nomeCorrida + nomeBicicleta
+			valorPagar = 130
+			
+		}
+		
+		senao se (perdaCalorica > 1400){
+			excNecessario = nomeMusculacao + nomeCorrida + nomeBicicleta + nomeCorda
+			valorPagar = 150
+		}
+
+		se (perdaCalorica > 4000){
+			valorDesconto = (valorPagar)* 50 / 100
+		}
+			
+		
+		escreva("\nCalculo do IMC: " + imc + "\nLista de exercicio: " + excNecessario)
+		escreva("\nDesconto: " + valorDesconto + "\nValor total a pagar: " + valorDesconto)
+		
+           
+	
+         
+		
+	}
+}
