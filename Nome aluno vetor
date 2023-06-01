@@ -1,0 +1,19 @@
+package javaapplication1;
+
+import javax.swing.JOptionPane;
+
+public class nomeAlunoVetor {
+
+    public static void main(String[] args) {
+
+        String[] aluno = new String[3];
+
+        aluno[0] = JOptionPane.showInputDialog("Primeiro aluno: ");
+        aluno[1] = JOptionPane.showInputDialog("Segundo aluno: ");
+        aluno[2] = JOptionPane.showInputDialog("Terceiro aluno: ");
+
+        JOptionPane.showMessageDialog(null, aluno[0]);
+        JOptionPane.showMessageDialog(null, aluno[1]);
+        JOptionPane.showMessageDialog(null, aluno[2]);
+    }
+}
