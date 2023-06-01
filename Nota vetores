@@ -1,0 +1,26 @@
+package javaapplication1;
+
+import javax.swing.JOptionPane;
+
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+
+
+        float[] nota = new float[3];
+
+        nota[0] = Float.parseFloat(JOptionPane.showInputDialog("Nota [0]: "));
+        nota[1] = Float.parseFloat(JOptionPane.showInputDialog("Nota [1]: "));
+        nota[2] = Float.parseFloat(JOptionPane.showInputDialog("Nota [2]: "));
+
+        JOptionPane.showMessageDialog(null, nota[0]);
+        JOptionPane.showMessageDialog(null, nota[1]);
+        JOptionPane.showMessageDialog(null, nota[2]);
+        
+        
+
+   
+
+    }
+
+}
