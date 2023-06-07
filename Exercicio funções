@@ -1,0 +1,36 @@
+programa
+{
+	inteiro contador
+	cadeia produto
+	
+	funcao inicio()
+	{
+		cadeia acao
+
+		faca{
+			ImprimeMenu()
+			leia(acao)
+			Inserir()
+			
+		} enquanto (acao != "3")
+	}
+	
+	funcao ImprimeMenu(){
+		
+			escreva("******* Menu ********\n")
+			escreva("1 - Inserir\n")
+			escreva("2 - Exibir\n")
+			escreva("3 - Encerrar\n")
+	}
+
+	funcao Inserir(){
+
+		escreva("Informe o produto: ")
+		leia(produto)
+		
+	}
+
+	funcao Exibir()
+	
+}
+	
