@@ -1,7 +1,7 @@
 programa
 {
-	inteiro contador
-	cadeia produto
+	inteiro contador = 0
+	cadeia produto [999]
 	
 	funcao inicio()
 	{
@@ -9,15 +9,25 @@ programa
 
 		faca{
 			ImprimeMenu()
+			
 			leia(acao)
-			Inserir()
+
+			se(acao == "1"){
+			   Inserir()
+			}
+
+			se (acao == "2"){
+			    Exibir()
+			}
+
+			
 			
 		} enquanto (acao != "3")
 	}
 	
 	funcao ImprimeMenu(){
 		
-			escreva("******* Menu ********\n")
+			escreva("\n******* Menu ********\n")
 			escreva("1 - Inserir\n")
 			escreva("2 - Exibir\n")
 			escreva("3 - Encerrar\n")
@@ -25,12 +35,32 @@ programa
 
 	funcao Inserir(){
 
-		escreva("Informe o produto: ")
-		leia(produto)
+		cadeia nomeProduto = ""
 		
+		faca{
+			escreva("\nInforme o nome do produto: ")
+			leia(nomeProduto)
+			se(nomeProduto == ""){
+			   escreva("\nNome do produto invalido")
+			}
+			  
+		}enquanto(nomeProduto == "")
+
+		produto[contador] = nomeProduto
+		contador ++
+
 	}
 
-	funcao Exibir()
+		
+				   	 	
 	
+	funcao Exibir(){
+
+		para(inteiro i = 0; i < contador; i ++){
+			escreva("Produto" + (i + 1))  
+
+		   
+		
+		}		
+	}
 }
-	
