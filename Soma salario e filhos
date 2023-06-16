@@ -1,0 +1,42 @@
+package reforco;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio {
+
+    public static void main(String[] args) {
+
+        int op = 1;
+        int contSalario = 0, contFilho = 0;
+        int filho, somaFilho = 0, mediaFilho;
+        float salario, somaSalario = 0, mediaSalario;
+
+        do {
+
+            salario = Float.parseFloat(JOptionPane.showInputDialog("Informe seu salario: "));
+            if (salario != -1) {
+                somaSalario =+ salario;
+                contSalario++;
+
+            }
+
+            filho = Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de filhos: "));
+            if (filho != -1) {
+                somaFilho =+ filho;
+                contFilho++;
+
+            }
+
+            op = Integer.parseInt(JOptionPane.showInputDialog("Voce deseja continuar?\n 0 - NÃO\n 1 - SIM"));
+
+        } while (op == 1);
+
+        mediaSalario = somaSalario / contSalario;
+        mediaFilho = somaFilho / contFilho;
+
+        JOptionPane.showMessageDialog(null, "Media salarial é: " + mediaSalario
+                + "\nMedia de filhos é: " + mediaFilho);
+    }
+
+}
+
