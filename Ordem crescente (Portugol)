@@ -1,0 +1,28 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro numero [13] = {10,9,80,72,74,5,62,36,44,7,3,17,66} 
+		inteiro numeroMaior = 0
+
+		para(inteiro i = 0; i < 13; i++){
+
+			para(inteiro j = i; j < 13; j++) {
+
+				se ( numero[i] > numero[j] ) {
+
+					numeroMaior = numero[i]
+					numero[i]   = numero[j]
+					numero[j]   = numeroMaior
+					
+				}
+			}
+		}
+
+		para(inteiro i = 0; i < 13; i++){
+
+			escreva("\nA ordem crescente é: " + numero[i])
+		}
+	}
+}
